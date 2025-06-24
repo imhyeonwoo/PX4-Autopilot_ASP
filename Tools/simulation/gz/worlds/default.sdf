@@ -1,6 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <sdf version="1.9">
   <world name="default">
+    <!-- <gui fullscreen="0"> 
+      <plugin filename="MinimalScene" name="3D Scene"> 
+        <pose>-120.20925610706298 33.762506989510747 0.5 0.0 0.0 2.0821032745761281</pose>
+      </plugin> 
+    </gui> -->
+
     <physics type="ode">
       <max_step_size>0.004</max_step_size>
       <real_time_factor>1.0</real_time_factor>
@@ -33,6 +39,71 @@
         <outer_angle>0</outer_angle>
         <falloff>0</falloff>
       </spot>
+    </light>
+
+    <light name="room_light_01" type="point">
+      <!-- 천장에 달린 조명 위치 -->
+      <pose> -99.25800323486328 99.0 13.22029972076416 1.4610009702433753 0.61296222872900497 3.0646405630424032 </pose>
+
+      <!-- 밝기 / 색상 -->
+      <diffuse>1 1 1 1</diffuse>      <!-- 순백색 -->
+      <specular>0.1 0.1 0.1 1</specular>
+      <intensity>2.0</intensity>      <!-- 기본(1.0)보다 두 배 밝기 -->
+
+      <!-- 그림자 -->
+      <cast_shadows>true</cast_shadows>
+      <visualize>false</visualize>
+
+      <!-- 감쇠: 0 m에서 100 m까지, 거리 따라 점차 어두워짐 -->
+      <attenuation>
+        <range>20</range>
+        <constant>0.0</constant>
+        <linear>0.25</linear>
+        <quadratic>0.01</quadratic>
+      </attenuation>
+    </light>
+
+    <light name="room_light_02" type="point">
+      <!-- 천장에 달린 조명 위치 -->
+      <pose> -99.25800323486328 99.0 21.22029972076416 1.4610009702433753 0.61296222872900497 3.0646405630424032 </pose>
+      <visualize>false</visualize>
+
+      <!-- 밝기 / 색상 -->
+      <diffuse>1 1 1 1</diffuse>      <!-- 순백색 -->
+      <specular>0.1 0.1 0.1 1</specular>
+      <intensity>2.0</intensity>      <!-- 기본(1.0)보다 두 배 밝기 -->
+
+      <!-- 그림자 -->
+      <cast_shadows>true</cast_shadows>
+
+      <!-- 감쇠: 0 m에서 100 m까지, 거리 따라 점차 어두워짐 -->
+      <attenuation>
+        <range>20</range>
+        <constant>0.0</constant>
+        <linear>0.25</linear>
+        <quadratic>0.01</quadratic>
+      </attenuation>
+    </light>
+
+    <light name="room_light_03" type="point">
+      <!-- 천장에 달린 조명 위치 -->
+      <pose> -64.1409912109375 75.0306396484375 20.173868179321289 1.5346099484236408 0.1174869930370713 3.0243400011677379 </pose>
+      <!-- 밝기 / 색상 -->
+      <diffuse>1 1 1 1</diffuse>      <!-- 순백색 -->
+      <specular>0.1 0.1 0.1 1</specular>
+      <intensity>2.0</intensity>      <!-- 기본(1.0)보다 두 배 밝기 -->
+      <visualize>false</visualize>
+
+      <!-- 그림자 -->
+      <cast_shadows>true</cast_shadows>
+
+      <!-- 감쇠: 0 m에서 100 m까지, 거리 따라 점차 어두워짐 -->
+      <attenuation>
+        <range>20</range>
+        <constant>0.0</constant>
+        <linear>0.25</linear>
+        <quadratic>0.01</quadratic>
+      </attenuation>
     </light>
 
   <!-- Coordinate Setting -->
@@ -128,6 +199,108 @@
     <name>aruco_marker_2_4</name>
       <pose>-70.514152526855469 74.3680419921875 15.418899536132812 1.4769700259713585 0.32164600944967187 3.1065600054051101</pose>
   </include>
+
+
+    <model name="box1">
+      <pose>-101.30139923095703 100.49049377441406 12.23951530456543 2.184280017470619 0.097968295052761709 -1.5810500393988314</pose>
+      <static>true</static>
+      <link name="link1">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>1.5 1.5 0.1</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>1.5 1.5 0.1</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.3 0.3 0.3 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      </link>
+    </model>
+    <model name="box2">
+      <pose>-71.138641357421875 74.547164916992188 20.183452606201172 1.6853399609865909 0.039175891267171595 -1.6887000537160914</pose>
+      <static>true</static>
+      <link name="link1">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>1.5 1.5 0.1</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>1.5 1.5 0.1</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.3 0.3 0.3 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      </link>
+    </model>
+    <model name="box3">
+      <pose>-70.572090148925781 74.866439819335938 15.422853469848633 1.8871999472778032 0.088925698544307166 -1.5774900112778907</pose>
+      <static>true</static>
+      <link name="link1">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>1.5 1.5 0.1</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>1.5 1.5 0.1</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.3 0.3 0.3 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      </link>
+    </model>
+    <model name="box4">
+      <pose>-103.61959838867188 100.23430633544922 19.83787727355957 1.8156199902102501 0.088925618388241687 -1.5774900077226235</pose>
+      <static>true</static>
+      <link name="link1">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>1.5 1.5 0.1</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>1.5 1.5 0.1</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.3 0.3 0.3 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>1 1 1 1</specular>
+        </material>
+      </visual>
+      </link>
+    </model>
 
   <!-- Environment -->
 
