@@ -11,7 +11,7 @@
   </asset>
   <library_images>
     <image id="Marker0_png" name="Marker0_png">
-      <init_from>model://marker_10/materials/textures/marker_10.png</init_from>
+      <init_from>model://marker_9/materials/textures/marker_9.png</init_from>
     </image>
   </library_images>
   <library_effects>
