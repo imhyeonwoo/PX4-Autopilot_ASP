@@ -6,7 +6,7 @@
         <geometry>
           <mesh>
             <uri>model://marker_10/meshes/marker_10.dae</uri>
-          <scale>1.0 1.0 1.0</scale></mesh>
+          <scale>2.0 2.0 2.0</scale></mesh>
         </geometry>
       </visual>
     </link>
