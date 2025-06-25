@@ -418,7 +418,7 @@
             </axis>
         </joint>
 
-        <link name="aruco_marker_6_link">
+        <link name="aruco_marker_10_link">
             <pose relative_to="base_link">-0.15 0 0.26 0 1.570796 0</pose>
             <inertial>
               <mass>0.01</mass>
@@ -427,18 +427,18 @@
                 <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
               </inertia>
             </inertial>
-            <visual name="marker_6_visual">
+            <visual name="marker_10_visual">
               <geometry>
                 <mesh>
-                  <uri>model://marker_6/meshes/marker_6.dae</uri>
+                  <uri>model://marker_10/meshes/marker_10.dae</uri>
                   <scale>1.0 1.0 1.0</scale>
                 </mesh>
               </geometry>
             </visual>
         </link>
-        <joint name="marker_6_joint" type="fixed">
+        <joint name="marker_10_joint" type="fixed">
             <parent>base_link</parent>
-            <child>aruco_marker_6_link</child>
+            <child>aruco_marker_10_link</child>
         </joint>
 
         <plugin
