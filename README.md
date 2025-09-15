@@ -1,6 +1,22 @@
 # Test env of Autonomous Vehicle Platform class of Konkuk Univ.
-The background of mission is UAV-UGV cooperative exploration of collaped city.
-![Sky View](pictures/sky_view.png)
+For my personal study, I modified `Tools/simulation/gz/worlds/default.sdf` which is the default map.
+
+I will find Mathematical System Model of the UAV for Localization and Control.
+
+For more details, visit `https://github.com/GraduationProject-Team3-Avionics`
+
+![My Map](pictures/my_map.png)
+
+---
+
+# Build the Map
+```bash
+cd ~/[PX4_Autopilot workspace]
+make px4_sitl gz_x500_gimbal
+```
+- If you have any trouble, maybe you should try `rm -rf build` and try again.
+
+---
 
 # PX4 Drone Autopilot
 
