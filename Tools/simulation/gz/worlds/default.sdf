@@ -123,13 +123,12 @@
     <pose>205 155 -1 0 0 0</pose>
   </include>
 
-  <!-- Unmmanned Ground Vehicle Setting -->
+  <!-- Unmanned Ground Vehicle Setting (disabled)
   <model name='X1_asp'>
     <include merge='true'>
-    <uri>model://x1_config_5</uri>
+      <uri>model://x1_config_5</uri>
     </include>
     <pose>-120.20925610706298 35.762506989510747 -0.13497809721003132 1.6841892311465292e-11 7.4065994351716107e-09 2.0821032745761281</pose>
-
 
     <plugin name="gz::sim::v8::systems::DiffDrive" filename="gz-sim-diff-drive-system">
       <left_joint>rear_left_wheel_joint</left_joint>
@@ -144,11 +143,12 @@
     </plugin>
 
   </model>
+  -->
 
   <!-- arUco marker -->
 
   <!-- Roof -->
-  <include>
+  <!-- <include>
     <uri>model://marker_7</uri>
     <name>aruco_marker_7</name>
     <pose>-96.483772277832031 68.52215576171875 3.8531563282012939 2.7093537970018531 1.5707900273389155 -3.1408861898262121</pose>
@@ -177,10 +177,10 @@
     <uri>model://marker_8</uri>
     <name>aruco_marker_8</name>
     <pose>-105.97454833984375 99.843254089355469 23.375644683837891 0.3378409862404616 1.4445500015518304 0.77447798584605232</pose>
-  </include>
+  </include> -->
 
   <!-- Room -->
-  <include>
+  <!-- <include>
     <uri>model://marker_1</uri>
     <name>aruco_marker_1</name>
       <pose>-103.63332366943359 99.378829956054688 20.037605285644531 1.4788500378994207 0.24640299389833475 3.1121099963295582</pose>
@@ -199,10 +199,10 @@
     <uri>model://marker_6</uri>
     <name>aruco_marker_6</name>
       <pose>-70.800155639648438 74.293670654296875 16.26873779296875 1.4769700259713585 0.32164600944967187 3.1065600054051101</pose>
-  </include>
+  </include> -->
 
 
-    <model name="box1">
+    <!-- <model name="box1">
       <pose>-100.91260528564453 100.33341979980469 12.426758766174316 2.184280017470619 0.097968295052761709 -1.5810500393988314</pose>
       <static>true</static>
       <link name="link1">
@@ -301,14 +301,14 @@
         </material>
       </visual>
       </link>
-    </model>
+    </model> -->
 
   <!-- Environment -->
 
 
 
 
-  <include>
+  <!-- <include>
     <uri>model://tunnel_wall_debris</uri>
     <name>tunnelblocker_1</name>
     <pose>-104.06036376953124 92.897933959960938 0 0 0 -1.1310601126575641</pose>
@@ -342,12 +342,12 @@
     <uri>model://tunnel_wall_debris</uri>
     <name>tunnelblocker_7</name>
     <pose>-110.60462951660155 79.02187347412108 0 0 0 -1.1310601126575641</pose>
-  </include>
+  </include> -->
 
 
 
 
-  <include>
+  <!-- <include>
     <uri>model://oak_tree</uri>
     <name>Pine Tree_1</name>
     <pose>-124.68502807617188 32.55889892578125 -0.39117199182510376 0 0 0</pose>
@@ -489,7 +489,7 @@
     <uri>model://hatchback</uri>
     <name>hatchback_14</name>
     <pose>-72.685775756835938 100.93141937255859 -0.25 0 0 1.9803999728523964</pose>
-  </include>
+  </include> -->
 
   </world>
 </sdf>
