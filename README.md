@@ -3,7 +3,7 @@ For my personal study, I modified `Tools/simulation/gz/worlds/default.sdf` which
 
 I will find Mathematical System Model of the UAV for Localization and Control.
 
-For more details, visit `https://github.com/GraduationProject-Team3-Avionics`
+For more details, visit https://github.com/GraduationProject-Team3-Avionics
 
 ![My Map](pictures/my_map.png)
 
